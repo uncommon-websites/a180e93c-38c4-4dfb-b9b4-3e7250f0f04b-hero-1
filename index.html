@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awwwards — The awards for design, creativity and innovation on the Internet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.97); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-scale-in {
+            opacity: 0;
+            animation: scaleIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .delay-0 { animation-delay: 0ms; }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+
+        .text-balance { text-wrap: balance; }
+        .text-pretty { text-wrap: pretty; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-fade-in-up, .animate-fade-in, .animate-scale-in {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+<body class="bg-[#f5f5f5] text-black font-sans h-screen w-full overflow-hidden relative selection:bg-black selection:text-white">
+
+    <!-- Abstract Graphic (CSS Recreation for better cohesion) -->
+    <div class="absolute top-0 right-0 w-[49%] h-[53%] z-0 bg-[#0a192f] overflow-hidden animate-scale-in delay-400 origin-top-right">
+        <!-- Left bands -->
+        <div class="absolute top-0 left-0 w-[2%] h-full bg-[#8abce0]"></div>
+        <div class="absolute top-0 left-[2%] w-[2%] h-full bg-[#6ba4c8]"></div>
+        <div class="absolute top-0 left-[4%] w-[2%] h-full bg-[#4a84a8]"></div>
+        <div class="absolute top-0 left-[6%] w-[2%] h-full bg-[#2a6488]"></div>
+        <div class="absolute top-0 left-[8%] w-[2%] h-full bg-[#0a4468]"></div>
+        
+        <!-- Bottom bands -->
+        <div class="absolute bottom-0 left-0 w-full h-[2%] bg-[#8abce0]"></div>
+        <div class="absolute bottom-[2%] left-0 w-full h-[2%] bg-[#6ba4c8]"></div>
+        <div class="absolute bottom-[4%] left-0 w-full h-[2%] bg-[#4a84a8]"></div>
+        <div class="absolute bottom-[6%] left-0 w-full h-[2%] bg-[#2a6488]"></div>
+        <div class="absolute bottom-[8%] left-0 w-full h-[2%] bg-[#0a4468]"></div>
+
+        <!-- Dark horizontal lines -->
+        <div class="absolute top-[22%] left-0 w-full h-[1.5%] bg-[#030812]"></div>
+        <div class="absolute top-[52%] left-0 w-full h-[1.5%] bg-[#030812]"></div>
+        <div class="absolute top-[82%] left-0 w-full h-[1.5%] bg-[#030812]"></div>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="relative z-10 w-full h-full p-10 md:p-12 flex flex-col justify-between">
+        
+        <!-- Top Section: Logo & Nav -->
+        <div class="flex w-full">
+            <!-- Logo -->
+            <div class="w-[23%] animate-fade-in delay-0">
+                <a href="#" class="inline-flex items-center text-[44px] font-black tracking-tighter leading-none hover:opacity-80 transition-opacity duration-200 uppercase">
+                    awww
+                    <span class="bg-black text-white w-[22px] h-[38px] flex items-center justify-center mx-[2px] relative top-[-1px]">
+                        <span class="text-[42px] leading-none absolute top-[5px]">*</span>
+                    </span>
+                    rds
+                </a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="w-[27%] animate-fade-in delay-100 mt-2">
+                <ul class="text-[15px] font-bold leading-[1.3] tracking-tight flex flex-col gap-[2px]">
+                    <li class="relative flex items-center">
+                        <span class="absolute -left-[16px] text-[20px] leading-none top-[-2px]">&bull;</span>
+                        <a href="#" class="hover:opacity-70 transition-opacity duration-200">Winners</a>
+                    </li>
+                    <li class="relative flex items-center">
+                        <a href="#" class="hover:opacity-70 transition-opacity duration-200">Academy</a>
+                    </li>
+                    <li class="relative flex items-center">
+                        <a href="#" class="hover:opacity-70 transition-opacity duration-200">Directory</a>
+                    </li>
+                    <li class="relative flex items-center">
+                        <a href="#" class="hover:opacity-70 transition-opacity duration-200">Job Board</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Middle Section: Main Text -->
+        <div class="absolute top-[45%] left-[23%] w-[28%] max-w-[420px] animate-fade-in-up delay-200">
+            <h1 class="text-[17px] font-bold leading-tight tracking-tight text-balance mb-6">
+                Awwwards is the premier platform for digital recognition, celebrating the talent and effort of the best web designers, developers, and agencies in the world.
+            </h1>
+            <p class="text-[17px] font-bold leading-relaxed tracking-tight text-pretty text-[#374151]">
+                Through a rigorous peer-review system and high-traffic showcase, we provide professional prestige and visibility to creatives navigating a crowded digital landscape.
+            </p>
+        </div>
+
+        <!-- Bottom Section: Footer -->
+        <div class="flex justify-between items-end w-full animate-fade-in delay-300 pb-1">
+            <!-- Left Footer Text -->
+            <div class="w-1/3 text-[13px] font-bold tracking-tight text-left text-[#374151]">
+                Rewarding creativity. Bridging the gap between brands, agencies, and creators.
+            </div>
+
+            <!-- Center Footer Text -->
+            <div class="w-1/3 text-center text-[13px] font-bold tracking-tight text-[#374151]">
+                &copy; 2025 Awwwards Online SL
+            </div>
+
+            <!-- Right Footer Logo -->
+            <div class="w-1/3 flex flex-col items-end justify-end leading-none text-right">
+                <span class="text-[22px] font-black tracking-tighter uppercase">awww</span>
+                <span class="text-[11px] font-bold tracking-tight mt-[2px] uppercase">wards</span>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
